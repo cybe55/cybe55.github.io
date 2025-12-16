@@ -2,66 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adel Mahmoud | Network & Systems Engineer</title>
+  <title>Adel Haridy | Network & Systems Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
- body {
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  background: #0b1f33;
-  color: #eaeaea;
-  line-height: 1.7;
-}
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      background: #0b1f33;
+      color: #eaeaea;
+      line-height: 1.7;
+    }
 
     header {
-      background: #0a2540;
+      background: linear-gradient(135deg, #0a2540, #06182c);
       color: white;
-      padding: 40px;
+      padding: 70px 20px;
       text-align: center;
     }
- .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.skill-card {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #3b82f6;
-}
+    nav {
+      background: #081d33;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.skill-card h3 {
-  margin-top: 0;
-  color: #0a2540;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  color: #222;
-  border-radius: 8px;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-h2 {
-  color: #0a2540;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      color: #111;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #0a2540;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #0a2540;
+      margin-top: 25px;
+    }
 
     ul {
-      line-height: 1.8;
+      padding-left: 20px;
     }
+
+    /* Skills Cards */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #3b82f6;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background: #ddd;
+      padding: 25px;
+      color: #ccc;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -70,6 +96,26 @@ h2 {
   <p>CCNP ENCOR | CCNA | RHCSA | MCSA</p>
 </header>
 
+<nav>
+  <a href="#certs">Certifications</a>
+  <a href="#skills">Skills</a>
+  <a href="#labs">Labs</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <h2>Certifications</h2>
+  <ul>
+    <li>CCNP ENCOR – Enterprise Networking</li>
+    <li>CCNA – Routing & Switching</li>
+    <li>MCSA – Windows Server Administration</li>
+    <li>RHCSA – Red Hat Linux System Administration</li>
+  </ul>
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
   <h2>Technical Skills</h2>
 
@@ -96,7 +142,7 @@ h2 {
     <div class="skill-card">
       <h3>Linux (RHCSA)</h3>
       <ul>
-        <li>User & Permission Management</li>
+        <li>User & Permissions</li>
         <li>Services (SSH, HTTP)</li>
         <li>Bash Basics</li>
       </ul>
@@ -104,32 +150,16 @@ h2 {
   </div>
 </section>
 
-
-<section>
-  <h2>Technical Skills</h2>
-  <h3>Networking</h3>
-  <ul>
-    <li>OSPF, EIGRP, BGP</li>
-    <li>VLANs, STP, EtherChannel</li>
-    <li>HSRP, VRRP, GLBP</li>
-    <li>ACLs, NAT (Static, Dynamic, PAT)</li>
-  </ul>
-
-  <h3>Systems</h3>
-  <ul>
-    <li>Windows Server: AD, DNS, DHCP, GPO</li>
-    <li>Linux (RHCSA): Users, Services, Bash</li>
-  </ul>
-</section>
-
-<section>
+<!-- LABS -->
+<section id="labs">
   <h2>Hands-on Labs</h2>
+
   <h3>Completed & Evaluated (97.22% – Excellent)</h3>
   <ul>
     <li>LAN Design & Subnetting</li>
     <li>OSPF with MD5 Authentication</li>
     <li>HSRP Gateway Redundancy</li>
-    <li>ACL Filtering & NAT Configuration</li>
+    <li>ACL & NAT Configuration</li>
   </ul>
 
   <h3>Implemented – Pending Evaluation</h3>
@@ -140,25 +170,28 @@ h2 {
   </ul>
 </section>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
   <p>
-    Network & Systems Engineer with strong hands-on experience in enterprise networking labs.
-    Focused on real-world scenarios and infrastructure stability.
-    Actively seeking training and junior network/system roles.
+    Network & Systems Engineer with strong hands-on experience in enterprise
+    networking labs. Focused on real-world scenarios and infrastructure
+    stability. Seeking training and junior network/system roles.
   </p>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <ul>
-    <li>Email: adelmjkj@gmail.com.com</li>
+    <li>Email: your@email.com</li>
     <li>GitHub: https://github.com/cybe55</li>
+    <li>LinkedIn: (add later)</li>
   </ul>
 </section>
 
 <footer>
-  © 2025 Adel Mahmoud
+  © 2025 Adel Haridy
 </footer>
 
 </body>
