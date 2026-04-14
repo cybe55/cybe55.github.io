@@ -1,76 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Adel Haridy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adel Haridy Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-<style>
-body {
-  margin:0;
-  font-family: Arial;
-  background:#0a0f1c;
-  color:white;
-  text-align:center;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0f1c;
+      color: white;
+      margin-left: 220px;
+    }
 
-section {
-  padding:60px 20px;
-}
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 220px;
+      height: 100%;
+      background: #11182b;
+      padding: 30px 20px;
+      box-shadow: 5px 0 20px rgba(0,0,0,0.4);
+    }
 
-h1 {font-size:40px;}
-h2 {color:#ff4c4c;}
+    .sidebar h2 {
+      color: #ff4c4c;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
 
-.btn {
-  display:inline-block;
-  background:#ff4c4c;
-  color:white;
-  padding:12px 24px;
-  margin:10px;
-  text-decoration:none;
-  border-radius:8px;
-}
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 16px 0;
+      font-size: 17px;
+      transition: 0.3s;
+    }
 
-.card {
-  background:#11182b;
-  padding:20px;
-  margin:20px auto;
-  width:80%;
-  border-radius:12px;
-}
+    .sidebar a:hover {
+      color: #ff4c4c;
+      padding-left: 6px;
+    }
 
-img {
-  width:100%;
-  border-radius:10px;
-}
-</style>
+    section {
+      max-width: 950px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      color: #ff4c4c;
+      margin-bottom: 18px;
+      font-size: 32px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #d6d6d6;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4c4c;
+      color: white;
+      padding: 12px 22px;
+      margin: 10px 10px 0 0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e33b3b;
+      transform: translateY(-2px);
+    }
+
+    .card {
+      background: #11182b;
+      padding: 22px;
+      margin: 20px 0;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .skills-list,
+    .certs-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      background: #1a2438;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: white;
+      font-size: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #ff4c4c;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        margin-left: 0;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      section {
+        padding: 40px 18px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<section>
-<h1>Adel Mahmoud Haridy</h1>
-<p>Network & Cyber Security Engineer</p>
-<p>Hands-on experience in enterprise networking and security.</p>
+  <div class="sidebar">
+    <h2>Adel</h2>
+    <a href="#home">Home</a>
+    <a href="labs-proof.html">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<a href="Adel-Haridy-CV.pdf" download class="btn">Download CV</a>
-<a href="labs-proof.html" class="btn">View Projects</a>
-</section>
+  <section class="hero" id="home">
+    <h1>Adel Mahmoud Haridy</h1>
+    <p><strong>Network & Cyber Security Engineer</strong></p>
+    <p>Hands-on experience in enterprise networking, routing, switching, and network security.</p>
 
-<section>
-<h2>Skills</h2>
-<p>VLANs | Routing | OSPF | DHCP | NAT | Windows Server | Linux | FortiGate</p>
-</section>
+    <a href="Adel-Haridy-CV.pdf" download class="btn">Download CV</a>
+    <a href="labs-proof.html" class="btn">View Projects</a>
+  </section>
 
-<section>
-<h2>Certifications</h2>
-<p>CCNA | CCNP | MCSA | RHCSA | Huawei | ITI</p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Computer Science student focused on networking and cyber security, with practical lab experience
+        in routing, switching, system administration, and infrastructure design.
+      </p>
+    </div>
+  </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: adelmjkj@gmail.com</p>
-<p>Phone: 01274781564</p>
-</section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <h3>Technical Skills</h3>
+      <div class="skills-list">
+        <span class="pill">VLANs</span>
+        <span class="pill">Routing</span>
+        <span class="pill">Switching</span>
+        <span class="pill">OSPF</span>
+        <span class="pill">DHCP</span>
+        <span class="pill">NAT</span>
+        <span class="pill">Windows Server</span>
+        <span class="pill">Linux</span>
+        <span class="pill">FortiGate</span>
+        <span class="pill">Packet Tracer</span>
+        <span class="pill">GNS3</span>
+        <span class="pill">VMware</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+      <div class="certs-list">
+        <span class="pill">CCNA</span>
+        <span class="pill">CCNP ENCOR</span>
+        <span class="pill">MCSA</span>
+        <span class="pill">RHCSA</span>
+        <span class="pill">HCIA Datacom</span>
+        <span class="pill">Huawei AI</span>
+        <span class="pill">5G Basics</span>
+        <span class="pill">ITI Network Fundamentals</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:adelmjkj@gmail.com">adelmjkj@gmail.com</a></p>
+      <p>Phone: <a href="tel:+201274781564">01274781564</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1" target="_blank">adel-haridy-b4b3072b1</a></p>
+      <p>GitHub: <a href="https://github.com/cybe55" target="_blank">cybe55</a></p>
+    </div>
+  </section>
 
 </body>
 </html>
