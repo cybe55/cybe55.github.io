@@ -1,226 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Adel Haridy | Network & Systems Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<a href="Adel-Haridy-CV-Updated.pdf" class="cv-btn" target="_blank">
-  Download CV
-</a>
-  <style>
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      background: #0b1f33;
-      color: #eaeaea;
-      line-height: 1.7;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0a2540, #06182c);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background: #081d33;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 30px;
-      background: #ffffff;
-      color: #111;
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #0a2540;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      color: #0a2540;
-      margin-top: 25px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* Skills Cards */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .skill-card {
-      background: #f9fafb;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #3b82f6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #ccc;
-    }
-    .cv-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 30px;
-  background: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s ease;
+<meta charset="UTF-8">
+<title>Adel Haridy Portfolio</title>
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0a0f1c;
+  color:white;
 }
-
-.cv-btn:hover {
-  background: #2563eb;
+section {
+  padding:60px 20px;
+  max-width:900px;
+  margin:auto;
 }
-
-  </style>
+h1 {font-size:40px;}
+h2 {color:#ff4c4c;}
+.card {
+  background:#11182b;
+  padding:20px;
+  margin:15px 0;
+  border-radius:10px;
+}
+button {
+  background:#ff4c4c;
+  border:none;
+  padding:10px 20px;
+  color:white;
+  margin:10px;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Adel Haridy</h1>
-  <p>Network & Systems Engineer</p>
-  <p>CCNP ENCOR | CCNA | RHCSA | MCSA</p>
-
-<a href="Adel-Haridy-CV.pdf" class="cv-btn" target="_blank">
-  Download CV
-</a>
-
-</header>
-
-
-<nav>
-  <a href="#certs">Certifications</a>
-  <a href="#skills">Skills</a>
-  <a href="#labs">Labs</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- CERTIFICATIONS -->
-<section id="certs">
-  <h2>Certifications</h2>
-  <ul>
-    <li>CCNP ENCOR – Enterprise Networking</li>
-    <li>CCNA – Routing & Switching</li>
-    <li>MCSA – Windows Server Administration</li>
-    <li>RHCSA – Red Hat Linux System Administration</li>
-  </ul>
+<section>
+<h1>Adel Mahmoud Haridy</h1>
+<p>Network & Cyber Security Engineer</p>
+<p>Hands-on experience in enterprise networking and security.</p>
+<button>Download CV</button>
+<button>View Projects</button>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Technical Skills</h2>
+<section>
+<h2>Projects</h2>
 
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Networking</h3>
-      <ul>
-        <li>OSPF, EIGRP, BGP</li>
-        <li>VLANs, STP, EtherChannel</li>
-        <li>HSRP, VRRP, GLBP</li>
-        <li>ACLs, NAT</li>
-      </ul>
-    </div>
+<div class="card">
+<h3>Enterprise Network</h3>
+<p>VLANs, OSPF, DHCP, Full connectivity</p>
+</div>
 
-    <div class="skill-card">
-      <h3>Windows Server</h3>
-      <ul>
-        <li>Active Directory</li>
-        <li>DNS, DHCP</li>
-        <li>Group Policy</li>
-      </ul>
-    </div>
+<div class="card">
+<h3>Multi-Site Network</h3>
+<p>WAN, Routing, Site connectivity</p>
+</div>
 
-    <div class="skill-card">
-      <h3>Linux (RHCSA)</h3>
-      <ul>
-        <li>User & Permissions</li>
-        <li>Services (SSH, HTTP)</li>
-        <li>Bash Basics</li>
-      </ul>
-    </div>
-  </div>
+<div class="card">
+<h3>Security Lab</h3>
+<p>NAT, Firewall, Authentication</p>
+</div>
+
+<div class="card">
+<h3>HSRP Redundancy</h3>
+<p>Failover & high availability</p>
+</div>
+
 </section>
 
-<!-- LABS -->
- <a href="labs-proof.html" class="cv-btn" target="_blank">
-  View Lab Evaluation
- </a> 
-  <section id="labs">
-  <h2>Hands-on Labs</h2>
-
-  <h3>Completed & Evaluated (97.22% – Excellent)</h3>
-  <ul>
-    <li>LAN Design & Subnetting</li>
-    <li>OSPF with MD5 Authentication</li>
-    <li>HSRP Gateway Redundancy</li>
-    <li>ACL & NAT Configuration</li>
-  </ul>
-
-  <h3>Implemented – Pending Evaluation</h3>
-  <ul>
-    <li>EIGRP</li>
-    <li>BGP Intermediate</li>
-    <li>GLBP</li>
-  </ul>
+<section>
+<h2>Skills</h2>
+<p>Networking | Systems | Security | Tools</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Network & Systems Engineer with strong hands-on experience in enterprise
-    networking labs. Focused on real-world scenarios and infrastructure
-    stability. Seeking training and junior network/system roles.
-  </p>
+<section>
+<h2>Certifications</h2>
+<p>CCNA | CCNP | MCSA | RHCSA | Huawei</p>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: adelmjkj@gmail.com</li>
-    <li>GitHub: https://github.com/cybe55</li>
-    <li>LinkedIn: (www.linkedin.com/in/
-adel-haridy-b4b3072b1)</li>
-  </ul>
+<section>
+<h2>Contact</h2>
+<p>Email: adelmjkj@gmail.com</p>
+<p>Phone: 01274781564</p>
 </section>
-
-<footer>
-  © 2025 Adel Haridy
-</footer>
 
 </body>
 </html>
