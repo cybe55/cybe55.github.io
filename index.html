@@ -1,110 +1,633 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Adel Haridy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adel Haridy Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-<style>
-body {
-  margin:0;
-  font-family: Arial;
-  background:#0a0f1c;
-  color:white;
-  text-align:center;
-}
+    :root {
+      --bg: #07101d;
+      --bg2: #0b1424;
+      --sidebar: #10192c;
+      --card: #111d31;
+      --card2: #16233a;
+      --text: #ffffff;
+      --muted: #c9d2df;
+      --accent: #ff4d4f;
+      --accent-hover: #e63d40;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 14px 35px rgba(0,0,0,0.28);
+    }
 
-/* SIDEBAR */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  background: #11182b;
-  padding: 20px;
-  text-align: left;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, #081425 100%);
+      color: var(--text);
+      margin-left: 240px;
+    }
 
-.sidebar h2 {
-  color:#ff4c4c;
-}
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      background: var(--sidebar);
+      padding: 28px 22px;
+      border-right: 1px solid var(--border);
+      box-shadow: 5px 0 20px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
 
-.sidebar a {
-  display:block;
-  color:white;
-  margin:15px 0;
-  text-decoration:none;
-}
+    .sidebar h2 {
+      color: var(--accent);
+      font-size: 34px;
+      margin-bottom: 28px;
+    }
 
-.sidebar a:hover {
-  color:#ff4c4c;
-}
+    .sidebar a {
+      display: block;
+      color: #f1f5fb;
+      text-decoration: none;
+      margin: 18px 0;
+      font-size: 24px;
+      transition: 0.25s;
+    }
 
-/* يخلي المحتوى بعيد عن السايدبار */
-.main {
-  margin-left:200px;
-}
+    .sidebar a:hover {
+      color: var(--accent);
+      transform: translateX(6px);
+    }
 
-/* GENERAL */
-section {
-  padding:60px 20px;
-}
+    .main {
+      width: 100%;
+    }
 
-h1 {font-size:45px;}
-h2 {color:#ff4c4c;}
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 28px;
+    }
 
-.btn {
-  display:inline-block;
-  background:#ff4c4c;
-  color:white;
-  padding:12px 24px;
-  margin:10px;
-  text-decoration:none;
-  border-radius:8px;
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
 
-.btn:hover {
-  background:#e33b3b;
-}
+    .hero-content {
+      width: 100%;
+      max-width: 950px;
+    }
 
-</style>
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 76px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hero-role {
+      font-size: 34px;
+      color: #f0f4fb;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-desc {
+      font-size: 24px;
+      color: var(--muted);
+      max-width: 900px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.25s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 10px 25px rgba(255,77,79,0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: white;
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .stat-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-box h3 {
+      font-size: 30px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+
+    .stat-box p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      font-size: 48px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      text-align: center;
+      font-size: 20px;
+      max-width: 850px;
+      margin: 0 auto 34px;
+      line-height: 1.7;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: 0.28s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.34);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .project-card h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .project-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .project-list li {
+      color: #e7edf8;
+      font-size: 16px;
+      margin: 10px 0;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .project-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 9px;
+    }
+
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: #f3f7ff;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 17px;
+    }
+
+    .skills-wrap,
+    .cert-wrap {
+      max-width: 980px;
+      margin: auto;
+    }
+
+    .about-card,
+    .contact-card {
+      max-width: 950px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .about-card p,
+    .contact-card p {
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.25s;
+      font-size: 18px;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 20px 50px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero h1 {
+        font-size: 60px;
+      }
+
+      .hero-role {
+        font-size: 28px;
+      }
+
+      .hero-desc {
+        font-size: 21px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 850px) {
+      body {
+        margin-left: 0;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      .sidebar a {
+        font-size: 20px;
+      }
+
+      .main {
+        width: 100%;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero-role {
+        font-size: 24px;
+      }
+
+      .hero-desc {
+        font-size: 18px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .section-subtitle,
+      .about-card p,
+      .contact-card p {
+        font-size: 17px;
+      }
+
+      .project-card h3 {
+        font-size: 24px;
+      }
+
+      .project-card img {
+        height: 220px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <h2>Adel</h2>
-  <a href="#">Home</a>
-  <a href="labs-proof.html">Projects</a>
-  <a href="#">Skills</a>
-  <a href="#">Certifications</a>
-  <a href="#">Contact</a>
-</div>
+  <div class="sidebar">
+    <h2>Adel</h2>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<!-- MAIN CONTENT -->
-<div class="main">
+  <div class="main">
 
-<section>
-<h1>Adel Mahmoud Haridy</h1>
-<p>Network & Cyber Security Engineer</p>
-<p>Hands-on experience in enterprise networking and security.</p>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Networking • Cyber Security • Systems</div>
+        <h1>Adel Mahmoud Haridy</h1>
+        <div class="hero-role">Network & Cyber Security Engineer</div>
+        <p class="hero-desc">
+          Hands-on experience in enterprise networking, routing, switching, VLAN design,
+          system administration, and network security through real lab implementation and practical projects.
+        </p>
 
-<a href="Adel-Haridy-CV.pdf" download class="btn">Download CV</a>
-<a href="labs-proof.html" class="btn">View Projects</a>
-</section>
+        <div class="hero-buttons">
+          <a href="Adel-Haridy-CV.pdf" download class="btn btn-primary">Download CV</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
 
-<section>
-<h2>Skills</h2>
-<p>VLANs | Routing | OSPF | DHCP | NAT | Windows Server | Linux | FortiGate</p>
-</section>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>8+</h3>
+            <p>Professional certifications across networking, systems, and emerging technologies.</p>
+          </div>
+          <div class="stat-box">
+            <h3>4</h3>
+            <p>Core hands-on lab projects covering enterprise design, routing, and resilience.</p>
+          </div>
+          <div class="stat-box">
+            <h3>Real Labs</h3>
+            <p>Focused on practical implementation, troubleshooting, and technical problem solving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>Certifications</h2>
-<p>CCNA | CCNP | MCSA | RHCSA | Huawei | ITI</p>
-</section>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">
+        Real networking labs that demonstrate technical implementation, not just theory.
+      </p>
 
-</div>
+      <div class="projects-grid">
 
+        <div class="card project-card">
+          <img src="lab-proof-1.png" alt="Enterprise network topology">
+          <h3>Enterprise Network Infrastructure</h3>
+          <p>
+            Large-scale switched topology built around segmented user groups, structured access,
+            and scalable enterprise-style design.
+          </p>
+          <ul class="project-list">
+            <li>Designed multiple network segments for organized traffic flow.</li>
+            <li>Built a scalable switching structure for enterprise-style deployment.</li>
+            <li>Integrated access distribution and centralized connectivity logic.</li>
+          </ul>
+        </div>
+
+        <div class="card project-card">
+          <img src="lab-proof-2.png" alt="Multi-site routing lab">
+          <h3>Multi-Site WAN Routing</h3>
+          <p>
+            Routing-focused lab connecting separate sites through WAN links to ensure communication
+            across remote networks.
+          </p>
+          <ul class="project-list">
+            <li>Connected branch networks through routers and routed links.</li>
+            <li>Verified end-to-end communication between remote devices.</li>
+            <li>Practiced routing logic and troubleshooting across sites.</li>
+          </ul>
+        </div>
+
+        <div class="card project-card">
+          <img src="lab-proof-1.png" alt="OSPF and VLAN topology">
+          <h3>OSPF & VLAN Segmentation</h3>
+          <p>
+            Structured design using multiple VLANs and logical segmentation to improve organization,
+            scalability, and routing behavior.
+          </p>
+          <ul class="project-list">
+            <li>Separated broadcast domains using VLAN-based planning.</li>
+            <li>Applied logical network segmentation for cleaner topology design.</li>
+            <li>Improved understanding of scalable network architecture.</li>
+          </ul>
+        </div>
+
+        <div class="card project-card">
+          <img src="lab-proof-2.png" alt="Redundancy lab">
+          <h3>Gateway Redundancy & Availability</h3>
+          <p>
+            Availability-focused lab to understand resilient gateway behavior and stable network service
+            during changes or failures.
+          </p>
+          <ul class="project-list">
+            <li>Focused on continuity and reliability in routed environments.</li>
+            <li>Practiced redundancy thinking for gateway resilience.</li>
+            <li>Built stronger understanding of uptime-oriented infrastructure.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">
+        Technical capabilities across networking, systems, security, and core tools.
+      </p>
+      <div class="skills-wrap">
+        <div class="pill-grid">
+          <span class="pill">VLANs</span>
+          <span class="pill">Routing</span>
+          <span class="pill">Switching</span>
+          <span class="pill">OSPF</span>
+          <span class="pill">DHCP</span>
+          <span class="pill">NAT</span>
+          <span class="pill">Windows Server</span>
+          <span class="pill">Linux</span>
+          <span class="pill">FortiGate</span>
+          <span class="pill">Packet Tracer</span>
+          <span class="pill">GNS3</span>
+          <span class="pill">VMware</span>
+          <span class="pill">Wireshark</span>
+          <span class="pill">Active Directory</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-subtitle">
+        Strong certification base supporting networking, system administration, and modern infrastructure knowledge.
+      </p>
+      <div class="cert-wrap">
+        <div class="pill-grid">
+          <span class="pill">CCNA 200-301</span>
+          <span class="pill">CCNP ENCOR</span>
+          <span class="pill">MCSA 2016</span>
+          <span class="pill">RHCSA</span>
+          <span class="pill">HCIA Datacom</span>
+          <span class="pill">Huawei AI Technology</span>
+          <span class="pill">5G Basics</span>
+          <span class="pill">ITI Network Fundamentals</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="card about-card">
+        <p>
+          I am a Computer Science student focused on networking and cyber security,
+          with practical lab experience in routing, switching, system administration,
+          and infrastructure design.
+        </p>
+        <p>
+          My goal is to grow into a strong network and security professional by combining
+          technical depth, hands-on implementation, and structured problem-solving.
+        </p>
+        <p>
+          I also have a design background, which helps me present my work clearly
+          and build cleaner professional material.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Open to internships, junior roles, and technical opportunities in networking and security.
+      </p>
+      <div class="card contact-card">
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:adelmjkj@gmail.com">
+            <span>adelmjkj@gmail.com</span>
+            <span>Email</span>
+          </a>
+          <a class="contact-link" href="tel:+201274781564">
+            <span>01274781564</span>
+            <span>Phone</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/adel-haridy-b4b3072b1" target="_blank">
+            <span>linkedin.com/in/adel-haridy-b4b3072b1</span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-link" href="https://github.com/cybe55" target="_blank">
+            <span>github.com/cybe55</span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Adel Mahmoud Haridy. All rights reserved.
+    </div>
+
+  </div>
 </body>
 </html>
