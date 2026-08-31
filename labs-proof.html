@@ -1,109 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lab Evaluations | Adel Haridy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0b1f33;
-      color: #eaeaea;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #0a2540, #06182c);
-      padding: 40px 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .card {
-      background: #ffffff;
-      color: #111;
-      border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      color: #ffffff;
-      margin: 0;
-    }
-    .card h2 {
-      color: #0a2540;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    p {
-      margin: 10px 0 15px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
-    .grid img {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-    }
-    .note {
-      font-size: 14px;
-      color: #444;
-    }
-    a.back {
-      display: inline-block;
-      margin-top: 10px;
-      color: #3b82f6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adel Haridy | Infrastructure & Red Teaming Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-heading: #ffffff;
+            --accent-color: #58a6ff;
+            --red-team: #ff5555;
+            --badge-bg: #21262d;
+            --cert-gold: #f1e05a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--text-heading);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--red-team);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            max-width: 750px;
+            margin: 0 auto 20px auto;
+            font-size: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.6rem;
+            margin: 0 12px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: var(--text-heading);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .section-title i {
+            color: var(--accent-color);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--badge-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            border-radius: 15px;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 22px;
+            transition: transform 0.2s, border-color 0.2s;
+            overflow: hidden;
+        }
+
+        .project-card.red-team {
+            border-left-color: var(--red-team);
+        }
+
+        .project-img-container {
+            width: 100%;
+            background: #000;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .project-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project-title {
+            color: var(--text-heading);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .project-highlights {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .project-highlights li {
+            margin-bottom: 6px;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Certifications Grid */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--cert-gold);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cert-title {
+            color: var(--text-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .cert-issuer {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .cert-details {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Lab Evaluations & Performance</h1>
-  <p>Verified hands-on networking labs</p>
-</header>
+<div class="container">
 
-<main>
+    <!-- Header / Intro -->
+    <header>
+        <h1>Adel Mahmoud Haridy</h1>
+        <div class="subtitle"><i class="fas fa-user-ninja"></i> Enterprise Networking & Red Teaming Specialist</div>
+        <p class="bio">
+            Specialized in Enterprise Routing & Switching (CCNA/CCNP), Huawei Datacom, and Systems Administration (RHEL & MCSA). Transitioning core infrastructure knowledge into Offensive Security, Threat Emulation, and Network Penetration Testing.
+        </p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adelmjkj@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/cybe55" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
 
-  <div class="card">
-    <h2>Overview</h2>
-    <p>
-      This page presents verified evaluations for enterprise networking labs,
-      demonstrating hands-on implementation and instructor-assessed performance.
-    </p>
-    <ul>
-      <li><b>Overall Performance:</b> 93% – 97% (Excellent)</li>
-      <li><b>Technologies:</b> OSPF (MD5), EIGRP, BGP, HSRP, VRRP, GLBP</li>
-      <li><b>Switching & Security:</b> VLANs, VTP v3, EtherChannel, ACLs, Port Security</li>
-      <li><b>Services:</b> DHCP, DHCP Relay, NAT (Static, Dynamic, PAT)</li>
-    </ul>
-    <p class="note">
-      Screenshots below are provided as supporting evidence of evaluated lab work.
-    </p>
-  </div>
+    <!-- Technical Arsenal / Skills -->
+    <h2 class="section-title"><i class="fas fa-tools"></i> Technical Arsenal</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Networking & Datacom</h3>
+            <div class="tags">
+                <span class="tag">CCNA / CCNP Protocols</span>
+                <span class="tag">HCIA-Datacom</span>
+                <span class="tag">OSPF / BGP Routing</span>
+                <span class="tag">VLANs & Trunking</span>
+                <span class="tag">STP / EtherChannel</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Offensive Security</h3>
+            <div class="tags">
+                <span class="tag">Network PenTesting</span>
+                <span class="tag">Traffic Analysis (Wireshark)</span>
+                <span class="tag">Active Directory Attacks</span>
+                <span class="tag">Privilege Escalation</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>SysAdmin & Infrastructure</h3>
+            <div class="tags">
+                <span class="tag">Red Hat (RHEL 1&2)</span>
+                <span class="tag">MCSA Server 2016</span>
+                <span class="tag">Linux Hardening</span>
+                <span class="tag">5G & Cloud Basics</span>
+            </div>
+        </div>
+    </div>
 
-  <div class="card">
-    <h2>Evaluation Screenshots</h2>
-    <div class="grid">
-      <!-- ارفع الصور وغيّر الأسماء هنا -->
- <img src="lab-proof-1.png" alt="Lab Evaluation Screenshot 1">
-<img src="lab-proof-2.png" alt="Lab Evaluation Screenshot 2">
+    <!-- Projects Section -->
+    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Hands-on Network & Infrastructure Projects</h2>
+    
+    <div class="projects-container">
+
+        <!-- Project 1 (مربوط بالصورة project-1.png) -->
+        <div class="project-card">
+            <div class="project-img-container">
+                <img src="images/projects/project-1.png" alt="Enterprise Network Topology" class="project-img" onerror="this.parentElement.style.display='none'">
+            </div>
+            <h3 class="project-title">1. Enterprise Multi-Site Routing & Switching Infrastructure Design</h3>
+            <p class="project-description">
+                Designed and implemented a full-scale corporate network topology simulating multi-branch interconnections, redundancy, and traffic control based on CCNA/CCNP standards.
+            </p>
+            <ul class="project-highlights">
+                <li>Configured dynamic routing protocols including <strong>OSPF</strong> multi-area and <strong>EIGRP</strong> with route summarization and authentication.</li>
+                <li>Implemented High Availability using <strong>HSRP/VRRP</strong> and Link Aggregation via <strong>LACP EtherChannel</strong>.</li>
+                <li>Enforced VLAN segmentation, Inter-VLAN routing, and Rapid Spanning Tree Protocol (RSTP) for loop-free switching topologies.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">CCNA / CCNP</span>
+                    <span class="tag">OSPF</span>
+                    <span class="tag">VLANs</span>
+                    <span class="tag">EtherChannel</span>
+                    <span class="tag">HSRP</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 (مربوط بالصورة project-10.png) -->
+        <div class="project-card">
+            <div class="project-img-container">
+                <img src="images/projects/project-10.png" alt="Network Security Lab Topology" class="project-img" onerror="this.parentElement.style.display='none'">
+            </div>
+            <h3 class="project-title">2. Network Security, Access Control & Traffic Mitigation Lab</h3>
+            <p class="project-description">
+                Engineered perimeter security and internal isolation mechanisms across enterprise routers and switches to protect against unauthorized lateral movement.
+            </p>
+            <ul class="project-highlights">
+                <li>Deployed Standard and Extended <strong>Access Control Lists (ACLs)</strong> to restrict unauthorized inter-department communication.</li>
+                <li>Hardened layer-2 infrastructure using <strong>Port Security</strong>, <strong>DHCP Snooping</strong>, and <strong>Dynamic ARP Inspection (DAI)</strong>.</li>
+                <li>Configured Secure Remote Access (SSH v2) and AAA authentication workflows.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">Network Security</span>
+                    <span class="tag">ACLs</span>
+                    <span class="tag">DHCP Snooping</span>
+                    <span class="tag">Port Security</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 (مربوط بالصورة project-11.png) -->
+        <div class="project-card red-team">
+            <div class="project-img-container">
+                <img src="images/projects/project-11.png" alt="Threat Emulation Architecture" class="project-img" onerror="this.parentElement.style.display='none'">
+            </div>
+            <h3 class="project-title">3. Active Directory & Linux Infrastructure Threat Emulation</h3>
+            <p class="project-description">
+                Building a hybrid lab environment integrating Windows Server AD (MCSA) and Red Hat Enterprise Linux (RHEL) to test adversary tactics and security controls.
+            </p>
+            <ul class="project-highlights">
+                <li>Simulating domain compromise via Kerberoasting, BloodHound path discovery, and privilege escalation.</li>
+                <li>Testing SELinux policy enforcements and Auditd log analysis for Linux endpoint protection.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">Red Teaming</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">RHEL</span>
+                    <span class="tag">BloodHound</span>
+                </div>
+            </div>
+        </div>
 
     </div>
-  </div>
 
-  <a class="back" href="index.html">← Back to Portfolio</a>
+    <!-- Verified Certifications Section -->
+    <h2 class="section-title"><i class="fas fa-certificate"></i> Verified Certifications</h2>
+    
+    <div class="certs-grid">
 
-</main>
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">CCNA 200-301 & MCSA 2016</div>
+                <div class="cert-issuer">Networkat Program</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Sep 2025</p>
+                <p><strong>ID:</strong> NETKAT8440</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">HCIA-Datacom V1.0 Course</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> EBG20251127034919</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Artificial Intelligence Technology and Applications</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> ICT20251126001089</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">5G Basics: What it's all about (CRA Training)</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> ICTCRA20251121001294</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Introduction to Network Security</div>
+                <div class="cert-issuer">Information Technology Institute (ITI - Mahara-Tech)</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Apr 2026</p>
+                <p><strong>Verification:</strong> CLVC9H0QMJ / d8iSxfBH8A</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Computer Network Fundamentals</div>
+                <div class="cert-issuer">Information Technology Institute (ITI - Mahara-Tech)</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Apr 2026</p>
+                <p><strong>Verification:</strong> BCKAu5v1S0 / ok8qQylt9X</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Adel Mahmoud Haridy | Portfolio Hosted on adelharidy.tech</p>
+    </footer>
+
+</div>
 
 </body>
 </html>
