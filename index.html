@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adel Haridy | Infrastructure & Red Teaming</title>
+    <title>Adel Haridy | Infrastructure & Red Teaming Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -15,6 +15,7 @@
             --accent-color: #58a6ff;
             --red-team: #ff5555;
             --badge-bg: #21262d;
+            --cert-gold: #f1e05a;
         }
 
         * {
@@ -32,7 +33,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
         }
 
@@ -58,14 +59,14 @@
         }
 
         .bio {
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 20px auto;
             font-size: 1rem;
         }
 
         .social-links a {
             color: var(--text-main);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin: 0 12px;
             transition: color 0.3s;
             text-decoration: none;
@@ -83,6 +84,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
         }
 
         .section-title i {
@@ -129,7 +132,7 @@
         .projects-container {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 25px;
             margin-bottom: 50px;
         }
 
@@ -138,41 +141,35 @@
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--red-team);
             border-radius: 8px;
-            padding: 25px;
+            padding: 22px;
             transition: transform 0.2s, border-color 0.2s;
         }
 
         .project-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             border-color: var(--accent-color);
             border-left-color: var(--red-team);
         }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
         .project-title {
             color: var(--text-heading);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
         .project-description {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
         }
 
         .project-highlights {
             margin-left: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         .project-highlights li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .project-footer {
@@ -181,24 +178,45 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
-            padding-top: 15px;
+            padding-top: 12px;
             border-top: 1px solid var(--border-color);
         }
 
-        .btn-writeup {
-            background-color: var(--badge-bg);
-            color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-            padding: 6px 14px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
+        /* Certifications Grid */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
         }
 
-        .btn-writeup:hover {
-            background-color: var(--accent-color);
-            color: #000;
+        .cert-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--cert-gold);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cert-title {
+            color: var(--text-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .cert-issuer {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .cert-details {
+            font-size: 0.85rem;
+            color: #8b949e;
         }
 
         /* Footer */
@@ -220,12 +238,12 @@
         <h1>Adel Mahmoud Haridy</h1>
         <div class="subtitle"><i class="fas fa-user-ninja"></i> Infrastructure & Cloud-Focused Red Teamer</div>
         <p class="bio">
-            Bridging Enterprise Systems (RHEL & MCSA), Complex Networks (CCNA/CCNP), and Multi-Cloud Architecture (AWS/Azure) to perform real-world threat emulation and security assessments.
+            Leveraging a solid background in Enterprise Networking (CCNA/CCNP), System Administration (RHEL & MCSA), Cloud Architectures (AWS/Azure), and AI Applications to conduct adversary emulation, threat assessments, and security analysis.
         </p>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:adelmjkj@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/cybe55" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adelmjkj@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/cybe55" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </header>
 
@@ -238,47 +256,46 @@
                 <span class="tag">Active Directory Attacks</span>
                 <span class="tag">Lateral Movement</span>
                 <span class="tag">Privilege Escalation</span>
-                <span class="tag">C2 Setup</span>
+                <span class="tag">Network PenTesting</span>
                 <span class="tag">MITRE ATT&CK</span>
             </div>
         </div>
         <div class="skill-category">
-            <h3>Networking & Systems</h3>
+            <h3>Networking & Datacom</h3>
             <div class="tags">
-                <span class="tag">CCNA / CCNP</span>
-                <span class="tag">Red Hat (RHEL 1&2)</span>
-                <span class="tag">MCSA</span>
-                <span class="tag">Windows Server</span>
+                <span class="tag">HCIA-Datacom</span>
+                <span class="tag">CCNA / CCNP Track</span>
+                <span class="tag">5G Fundamentals</span>
+                <span class="tag">Routing & Switching</span>
             </div>
         </div>
         <div class="skill-category">
-            <h3>Cloud Security</h3>
+            <h3>SysAdmin & Cloud</h3>
             <div class="tags">
-                <span class="tag">AWS Infrastructure</span>
-                <span class="tag">Azure Security</span>
-                <span class="tag">Hybrid AD</span>
-                <span class="tag">IAM Security</span>
+                <span class="tag">Red Hat (RHEL 1&2)</span>
+                <span class="tag">MCSA Server 2016</span>
+                <span class="tag">AWS Security</span>
+                <span class="tag">Azure Infrastructure</span>
+                <span class="tag">AI Applications</span>
             </div>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Hands-on Labs & Red Team Projects</h2>
+    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Key Projects & Hands-on Labs</h2>
     
     <div class="projects-container">
 
-        <!-- Project Card 1 -->
+        <!-- Project 1 -->
         <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">1. Enterprise Hybrid Active Directory Penetration Test</h3>
-            </div>
+            <h3 class="project-title">1. Enterprise Hybrid Active Directory Security Lab</h3>
             <p class="project-description">
-                Built a complex, enterprise-grade Active Directory environment linked with Cloud assets (Azure & AWS) to simulate corporate infrastructure and test offensive attack vectors.
+                Designed a multi-domain Active Directory topology integrated with AWS/Azure hybrid infrastructure to emulate enterprise attacks and defense mechanisms.
             </p>
             <ul class="project-highlights">
-                <li>Enumerated domain attack paths using <strong>BloodHound</strong> and exploited Kerberos misconfigurations (Kerberoasting & AS-REP Roasting).</li>
-                <li>Executed Lateral Movement to escalate privileges from a low-privilege domain user to <strong>Enterprise Admin</strong>.</li>
-                <li>Exploited misconfigured IAM roles connecting local AD to Cloud tenants.</li>
+                <li>Enumerated AD trusts and attack paths using BloodHound.</li>
+                <li>Executed Kerberoasting and AS-REP Roasting to extract service hashes and escalate privileges to Domain Admin.</li>
+                <li>Identified cloud cross-tenant IAM misconfigurations.</li>
             </ul>
             <div class="project-footer">
                 <div class="tags">
@@ -287,21 +304,18 @@
                     <span class="tag">AWS / Azure</span>
                     <span class="tag">Impacket</span>
                 </div>
-                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
             </div>
         </div>
 
-        <!-- Project Card 2 -->
+        <!-- Project 2 -->
         <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">2. Red Hat Enterprise Linux (RHEL) Hardening & Escalation</h3>
-            </div>
+            <h3 class="project-title">2. Red Hat Enterprise Linux (RHEL) Privilege Escalation & Security Hardening</h3>
             <p class="project-description">
-                Simulated insider threat scenarios on custom Linux environments (RHEL) to identify misconfigurations and evaluate privilege escalation vectors.
+                Configured enterprise Linux servers to demonstrate local privilege escalation vectors and implement security controls.
             </p>
             <ul class="project-highlights">
-                <li>Identified and exploited custom SUID binaries, unsafe <code>sudoers</code> configurations, and vulnerable cron jobs to obtain <code>root</code> access.</li>
-                <li>Documented remediation strategies using <strong>SELinux</strong> custom policies and configured <strong>Auditd</strong> rules to detect attack attempts.</li>
+                <li>Exploited custom SUID binaries, misconfigured sudoers rules, and cron tasks for root access.</li>
+                <li>Configured custom Auditd logging rules and SELinux enforcement policies to neutralize threat vectors.</li>
             </ul>
             <div class="project-footer">
                 <div class="tags">
@@ -310,29 +324,105 @@
                     <span class="tag">SELinux</span>
                     <span class="tag">Privilege Escalation</span>
                 </div>
-                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
             </div>
         </div>
 
-        <!-- Project Card 3 (Placeholder for future lab) -->
+        <!-- Project 3 -->
         <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">3. AWS & Azure Multi-Cloud IAM Misconfiguration Exploitation</h3>
-            </div>
+            <h3 class="project-title">3. Corporate Network Infrastructure Simulation & Datacom Design</h3>
             <p class="project-description">
-                Designed a lab showcasing cloud-native vulnerabilities, misconfigured S3/Blob policies, and identity privilege escalation paths.
+                Simulated an enterprise datacom enterprise network incorporating OSPF, VLANs, and firewall rulesets matching HCIA-Datacom and CCNA architectural standards.
             </p>
             <ul class="project-highlights">
-                <li>Performed cloud recon using <strong>ScoutSuite</strong> and custom CLI scripts.</li>
-                <li>Exfiltrated sensitive assets via overly permissive IAM Role assumptions.</li>
+                <li>Implemented network segmentation and strict Access Control Lists (ACLs) to mitigate unauthorized lateral movement.</li>
+                <li>Configured secure remote management via SSH and SNMPv3 logging.</li>
             </ul>
             <div class="project-footer">
                 <div class="tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">Azure</span>
-                    <span class="tag">Cloud Penetration Testing</span>
+                    <span class="tag">Datacom</span>
+                    <span class="tag">CCNA</span>
+                    <span class="tag">Routing & Switching</span>
+                    <span class="tag">ACLs</span>
                 </div>
-                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Verified Certifications Section -->
+    <h2 class="section-title"><i class="fas fa-certificate"></i> Verified Certifications</h2>
+    
+    <div class="certs-grid">
+
+        <!-- Cert 1 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">CCNA 200-301 & MCSA 2016</div>
+                <div class="cert-issuer">Networkat Program</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Sep 2025</p>
+                <p><strong>ID:</strong> NETKAT8440</p>
+            </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">HCIA-Datacom V1.0 Course</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> EBG20251127034919</p>
+            </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Artificial Intelligence Technology and Applications</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> ICT20251126001089</p>
+            </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">5G Basics: What it's all about (CRA Training)</div>
+                <div class="cert-issuer">Huawei ICT Academy</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Nov 2025</p>
+                <p><strong>Code:</strong> ICTCRA20251121001294</p>
+            </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Introduction to Network Security</div>
+                <div class="cert-issuer">Information Technology Institute (ITI - Mahara-Tech)</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Apr 2026</p>
+                <p><strong>Verification:</strong> CLVC9H0QMJ / d8iSxfBH8A</p>
+            </div>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="cert-card">
+            <div>
+                <div class="cert-title">Computer Network Fundamentals</div>
+                <div class="cert-issuer">Information Technology Institute (ITI - Mahara-Tech)</div>
+            </div>
+            <div class="cert-details">
+                <p><strong>Date:</strong> Apr 2026</p>
+                <p><strong>Verification:</strong> BCKAu5v1S0 / ok8qQylt9X</p>
             </div>
         </div>
 
@@ -340,7 +430,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Adel Mahmoud Haridy. Hosted on GitHub Pages & Custom Domain.</p>
+        <p>&copy; 2026 Adel Mahmoud Haridy | Portfolio Hosted on adelharidy.tech</p>
     </footer>
 
 </div>
