@@ -139,16 +139,19 @@
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-left: 4px solid var(--red-team);
+            border-left: 4px solid var(--accent-color);
             border-radius: 8px;
             padding: 22px;
             transition: transform 0.2s, border-color 0.2s;
         }
 
+        .project-card.red-team {
+            border-left-color: var(--red-team);
+        }
+
         .project-card:hover {
             transform: translateY(-2px);
             border-color: var(--accent-color);
-            border-left-color: var(--red-team);
         }
 
         .project-title {
@@ -236,9 +239,9 @@
     <!-- Header / Intro -->
     <header>
         <h1>Adel Mahmoud Haridy</h1>
-        <div class="subtitle"><i class="fas fa-user-ninja"></i> Infrastructure & Cloud-Focused Red Teamer</div>
+        <div class="subtitle"><i class="fas fa-user-ninja"></i> Enterprise Networking & Red Teaming Specialist</div>
         <p class="bio">
-            Leveraging a solid background in Enterprise Networking (CCNA/CCNP), System Administration (RHEL & MCSA), Cloud Architectures (AWS/Azure), and AI Applications to conduct adversary emulation, threat assessments, and security analysis.
+            Specialized in Enterprise Routing & Switching (CCNA/CCNP), Huawei Datacom, and Systems Administration (RHEL & MCSA). Transitioning core infrastructure knowledge into Offensive Security, Threat Emulation, and Network Penetration Testing.
         </p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -251,95 +254,99 @@
     <h2 class="section-title"><i class="fas fa-tools"></i> Technical Arsenal</h2>
     <div class="skills-grid">
         <div class="skill-category">
-            <h3>Offensive Security</h3>
-            <div class="tags">
-                <span class="tag">Active Directory Attacks</span>
-                <span class="tag">Lateral Movement</span>
-                <span class="tag">Privilege Escalation</span>
-                <span class="tag">Network PenTesting</span>
-                <span class="tag">MITRE ATT&CK</span>
-            </div>
-        </div>
-        <div class="skill-category">
             <h3>Networking & Datacom</h3>
             <div class="tags">
+                <span class="tag">CCNA / CCNP Protocols</span>
                 <span class="tag">HCIA-Datacom</span>
-                <span class="tag">CCNA / CCNP Track</span>
-                <span class="tag">5G Fundamentals</span>
-                <span class="tag">Routing & Switching</span>
+                <span class="tag">OSPF / BGP Routing</span>
+                <span class="tag">VLANs & Trunking</span>
+                <span class="tag">STP / EtherChannel</span>
             </div>
         </div>
         <div class="skill-category">
-            <h3>SysAdmin & Cloud</h3>
+            <h3>Offensive Security</h3>
+            <div class="tags">
+                <span class="tag">Network PenTesting</span>
+                <span class="tag">Traffic Analysis (Wireshark)</span>
+                <span class="tag">Active Directory Attacks</span>
+                <span class="tag">Privilege Escalation</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>SysAdmin & Infrastructure</h3>
             <div class="tags">
                 <span class="tag">Red Hat (RHEL 1&2)</span>
                 <span class="tag">MCSA Server 2016</span>
-                <span class="tag">AWS Security</span>
-                <span class="tag">Azure Infrastructure</span>
-                <span class="tag">AI Applications</span>
+                <span class="tag">Linux Hardening</span>
+                <span class="tag">5G & Cloud Basics</span>
             </div>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Key Projects & Hands-on Labs</h2>
+    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Hands-on Network & Infrastructure Projects</h2>
     
     <div class="projects-container">
 
+        <!-- CCNA / CCNP Project 1 -->
         <div class="project-card">
-            <h3 class="project-title">1. Enterprise Hybrid Active Directory Security Lab</h3>
+            <h3 class="project-title">1. Enterprise Multi-Site Routing & Switching Infrastructure Design</h3>
             <p class="project-description">
-                Designed a multi-domain Active Directory topology integrated with AWS/Azure hybrid infrastructure to emulate enterprise attacks and defense mechanisms.
+                Designed and implemented a full-scale corporate network topology simulating multi-branch interconnections, redundancy, and traffic control based on CCNA/CCNP standards.
             </p>
             <ul class="project-highlights">
-                <li>Enumerated AD trusts and attack paths using BloodHound.</li>
-                <li>Executed Kerberoasting and AS-REP Roasting to extract service hashes and escalate privileges to Domain Admin.</li>
-                <li>Identified cloud cross-tenant IAM misconfigurations.</li>
+                <li>Configured dynamic routing protocols including <strong>OSPF</strong> multi-area and <strong>EIGRP</strong> with route summarization and authentication.</li>
+                <li>Implemented High Availability using <strong>HSRP/VRRP</strong> and Link Aggregation via <strong>LACP EtherChannel</strong>.</li>
+                <li>Enforced VLAN segmentation, Inter-VLAN routing, and Rapid Spanning Tree Protocol (RSTP) for loop-free switching topologies.</li>
             </ul>
             <div class="project-footer">
                 <div class="tags">
-                    <span class="tag">Active Directory</span>
-                    <span class="tag">BloodHound</span>
-                    <span class="tag">AWS / Azure</span>
-                    <span class="tag">Impacket</span>
+                    <span class="tag">CCNA / CCNP</span>
+                    <span class="tag">OSPF</span>
+                    <span class="tag">VLANs</span>
+                    <span class="tag">EtherChannel</span>
+                    <span class="tag">HSRP</span>
                 </div>
             </div>
         </div>
 
+        <!-- CCNA / CCNP Project 2 -->
         <div class="project-card">
-            <h3 class="project-title">2. Red Hat Enterprise Linux (RHEL) Privilege Escalation & Security Hardening</h3>
+            <h3 class="project-title">2. Network Security, Access Control & Traffic Mitigation Lab</h3>
             <p class="project-description">
-                Configured enterprise Linux servers to demonstrate local privilege escalation vectors and implement security controls.
+                Engineered perimeter security and internal isolation mechanisms across enterprise routers and switches to protect against unauthorized lateral movement.
             </p>
             <ul class="project-highlights">
-                <li>Exploited custom SUID binaries, misconfigured sudoers rules, and cron tasks for root access.</li>
-                <li>Configured custom Auditd logging rules and SELinux enforcement policies to neutralize threat vectors.</li>
+                <li>Deployed Standard and Extended <strong>Access Control Lists (ACLs)</strong> to restrict unauthorized inter-department communication.</li>
+                <li>Hardened layer-2 infrastructure using <strong>Port Security</strong>, <strong>DHCP Snooping</strong>, and <strong>Dynamic ARP Inspection (DAI)</strong>.</li>
+                <li>Configured Secure Remote Access (SSH v2) and AAA authentication workflows.</li>
             </ul>
             <div class="project-footer">
                 <div class="tags">
-                    <span class="tag">RHEL</span>
-                    <span class="tag">Linux Security</span>
-                    <span class="tag">SELinux</span>
-                    <span class="tag">Privilege Escalation</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3 class="project-title">3. Corporate Network Infrastructure Simulation & Datacom Design</h3>
-            <p class="project-description">
-                Simulated an enterprise datacom enterprise network incorporating OSPF, VLANs, and firewall rulesets matching HCIA-Datacom and CCNA architectural standards.
-            </p>
-            <ul class="project-highlights">
-                <li>Implemented network segmentation and strict Access Control Lists (ACLs) to mitigate unauthorized lateral movement.</li>
-                <li>Configured secure remote management via SSH and SNMPv3 logging.</li>
-            </ul>
-            <div class="project-footer">
-                <div class="tags">
-                    <span class="tag">Datacom</span>
-                    <span class="tag">CCNA</span>
-                    <span class="tag">Routing & Switching</span>
+                    <span class="tag">Network Security</span>
                     <span class="tag">ACLs</span>
+                    <span class="tag">DHCP Snooping</span>
+                    <span class="tag">Port Security</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offensive Security Focus (In Progress) -->
+        <div class="project-card red-team">
+            <h3 class="project-title">3. Active Directory & Linux Infrastructure Threat Emulation</h3>
+            <p class="project-description">
+                Building a hybrid lab environment integrating Windows Server AD (MCSA) and Red Hat Enterprise Linux (RHEL) to test adversary tactics and security controls.
+            </p>
+            <ul class="project-highlights">
+                <li>Simulating domain compromise via Kerberoasting, BloodHound path discovery, and privilege escalation.</li>
+                <li>Testing SELinux policy enforcements and Auditd log analysis for Linux endpoint protection.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">Red Teaming</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">RHEL</span>
+                    <span class="tag">BloodHound</span>
                 </div>
             </div>
         </div>
