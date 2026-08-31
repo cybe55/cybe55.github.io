@@ -1,273 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adel Haridy | Infrastructure & Red Teaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-heading: #ffffff;
+            --accent-color: #58a6ff;
+            --red-team: #ff5555;
+            --badge-bg: #21262d;
+        }
 
-<title>Adel Haridy | Network Engineer Portfolio</title>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-<style>
-*{
-    box-sizing:border-box;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
 
-body{
-    margin:0;
-    background:#06111d;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-    padding:40px 0;
-}
+        /* Header Section */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
 
-header{
-    margin-bottom:50px;
-}
+        h1 {
+            color: var(--text-heading);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-header h1{
-    font-size:45px;
-    margin-bottom:10px;
-}
+        .subtitle {
+            color: var(--red-team);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
 
-header p{
-    color:#9bb3cc;
-    font-size:18px;
-}
+        .bio {
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            font-size: 1rem;
+        }
 
-.buttons a{
-    display:inline-block;
-    margin-top:20px;
-    margin-right:10px;
-    padding:12px 22px;
-    border-radius:25px;
-    background:#00d9ff;
-    color:#001018;
-    text-decoration:none;
-    font-weight:bold;
-}
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 12px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
 
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
 
-h2.section{
-    margin-top:40px;
-    font-size:32px;
-}
+        /* Section Titles */
+        .section-title {
+            color: var(--text-heading);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
+        .section-title i {
+            color: var(--accent-color);
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
 
+        .skill-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
 
-.card{
-    background:#101f33;
-    border:1px solid #24425e;
-    border-radius:20px;
-    padding:20px;
-    transition:.3s;
-}
+        .skill-category h3 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
 
-.card:hover{
-    transform:translateY(-5px);
-}
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
+        .tag {
+            background: var(--badge-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            border-radius: 15px;
+        }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
-    background:#152b42;
-}
+        /* Projects Section - Separated Cards */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
 
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--red-team);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
 
-.card h3{
-    font-size:22px;
-}
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+            border-left-color: var(--red-team);
+        }
 
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-.tag{
-    color:#00d9ff;
-    font-weight:bold;
-}
+        .project-title {
+            color: var(--text-heading);
+            font-size: 1.4rem;
+        }
 
+        .project-description {
+            margin-bottom: 15px;
+        }
 
-.card p{
-    color:#c6d3e0;
-}
+        .project-highlights {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
 
+        .project-highlights li {
+            margin-bottom: 8px;
+        }
 
-footer{
-    margin-top:60px;
-    border-top:1px solid #24384d;
-    padding-top:25px;
-    color:#c6d3e0;
-}
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
 
-footer a{
-    color:#00d9ff;
-}
+        .btn-writeup {
+            background-color: var(--badge-bg);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 6px 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
 
-</style>
+        .btn-writeup:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
 
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
 </head>
-
-
 <body>
 
 <div class="container">
 
+    <!-- Header / Intro -->
+    <header>
+        <h1>Adel Mahmoud Haridy</h1>
+        <div class="subtitle"><i class="fas fa-user-ninja"></i> Infrastructure & Cloud-Focused Red Teamer</div>
+        <p class="bio">
+            Bridging Enterprise Systems (RHEL & MCSA), Complex Networks (CCNA/CCNP), and Multi-Cloud Architecture (AWS/Azure) to perform real-world threat emulation and security assessments.
+        </p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adelmjkj@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/cybe55" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
 
-<header>
+    <!-- Technical Arsenal / Skills -->
+    <h2 class="section-title"><i class="fas fa-tools"></i> Technical Arsenal</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Offensive Security</h3>
+            <div class="tags">
+                <span class="tag">Active Directory Attacks</span>
+                <span class="tag">Lateral Movement</span>
+                <span class="tag">Privilege Escalation</span>
+                <span class="tag">C2 Setup</span>
+                <span class="tag">MITRE ATT&CK</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Networking & Systems</h3>
+            <div class="tags">
+                <span class="tag">CCNA / CCNP</span>
+                <span class="tag">Red Hat (RHEL 1&2)</span>
+                <span class="tag">MCSA</span>
+                <span class="tag">Windows Server</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Cloud Security</h3>
+            <div class="tags">
+                <span class="tag">AWS Infrastructure</span>
+                <span class="tag">Azure Security</span>
+                <span class="tag">Hybrid AD</span>
+                <span class="tag">IAM Security</span>
+            </div>
+        </div>
+    </div>
 
-<h1>Adel Haridy</h1>
+    <!-- Projects Section -->
+    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Hands-on Labs & Red Team Projects</h2>
+    
+    <div class="projects-container">
 
-<h2>
-Network Engineer & Cybersecurity Portfolio
-</h2>
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">1. Enterprise Hybrid Active Directory Penetration Test</h3>
+            </div>
+            <p class="project-description">
+                Built a complex, enterprise-grade Active Directory environment linked with Cloud assets (Azure & AWS) to simulate corporate infrastructure and test offensive attack vectors.
+            </p>
+            <ul class="project-highlights">
+                <li>Enumerated domain attack paths using <strong>BloodHound</strong> and exploited Kerberos misconfigurations (Kerberoasting & AS-REP Roasting).</li>
+                <li>Executed Lateral Movement to escalate privileges from a low-privilege domain user to <strong>Enterprise Admin</strong>.</li>
+                <li>Exploited misconfigured IAM roles connecting local AD to Cloud tenants.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">BloodHound</span>
+                    <span class="tag">AWS / Azure</span>
+                    <span class="tag">Impacket</span>
+                </div>
+                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
+            </div>
+        </div>
 
-<p>
-Networking • Cybersecurity • Firewall • Active Directory • Cloud
-</p>
+        <!-- Project Card 2 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">2. Red Hat Enterprise Linux (RHEL) Hardening & Escalation</h3>
+            </div>
+            <p class="project-description">
+                Simulated insider threat scenarios on custom Linux environments (RHEL) to identify misconfigurations and evaluate privilege escalation vectors.
+            </p>
+            <ul class="project-highlights">
+                <li>Identified and exploited custom SUID binaries, unsafe <code>sudoers</code> configurations, and vulnerable cron jobs to obtain <code>root</code> access.</li>
+                <li>Documented remediation strategies using <strong>SELinux</strong> custom policies and configured <strong>Auditd</strong> rules to detect attack attempts.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">RHEL</span>
+                    <span class="tag">Linux Security</span>
+                    <span class="tag">SELinux</span>
+                    <span class="tag">Privilege Escalation</span>
+                </div>
+                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
+            </div>
+        </div>
 
+        <!-- Project Card 3 (Placeholder for future lab) -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">3. AWS & Azure Multi-Cloud IAM Misconfiguration Exploitation</h3>
+            </div>
+            <p class="project-description">
+                Designed a lab showcasing cloud-native vulnerabilities, misconfigured S3/Blob policies, and identity privilege escalation paths.
+            </p>
+            <ul class="project-highlights">
+                <li>Performed cloud recon using <strong>ScoutSuite</strong> and custom CLI scripts.</li>
+                <li>Exfiltrated sensitive assets via overly permissive IAM Role assumptions.</li>
+            </ul>
+            <div class="project-footer">
+                <div class="tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Cloud Penetration Testing</span>
+                </div>
+                <a href="#" class="btn-writeup"><i class="fas fa-file-alt"></i> View Writeup</a>
+            </div>
+        </div>
 
-<div class="buttons">
+    </div>
 
-<a href="Adel-Haridy-CV.pdf" download>
-Download CV
-</a>
-
-
-<a href="https://github.com/cybe55">
-GitHub
-</a>
-
-
-<a href="https://www.linkedin.com/in/adel-haridy-b4b3072b1">
-LinkedIn
-</a>
-
-</div>
-
-</header>
-
-
-
-<h2 class="section">
-Featured Projects
-</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-<img src="images/projects/project-1.png">
-<h3>Enterprise Network Design</h3>
-<div class="tag">Network</div>
-<p>OSPF • NAT • ACL • DHCP</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-2.png">
-<h3>Multi Area OSPF</h3>
-<div class="tag">Routing</div>
-<p>OSPF • ABR • Area Design</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-3.png">
-<h3>EIGRP Redundant Routing</h3>
-<div class="tag">Routing</div>
-<p>EIGRP • DUAL • Failover</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-4.png">
-<h3>BGP Multi AS</h3>
-<div class="tag">Advanced Routing</div>
-<p>BGP • eBGP • Autonomous Systems</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-5.png">
-<h3>Extended ACL Security</h3>
-<div class="tag">Cybersecurity</div>
-<p>Traffic Filtering • Cisco ACL</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-6.png">
-<h3>Fortigate Firewall Lab</h3>
-<div class="tag">Firewall</div>
-<p>Firewall Policy • NAT • VPN</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-7.png">
-<h3>Active Directory Infrastructure</h3>
-<div class="tag">Systems</div>
-<p>AD DS • DNS • DHCP • GPO</p>
-</div>
-
-
-
-<div class="card">
-<img src="images/projects/project-8.png">
-<h3>Cloud Security Lab</h3>
-<div class="tag">Cloud</div>
-<p>AWS • Azure • IAM</p>
-</div>
-
-
-</div>
-
-
-
-<footer>
-
-<h3>Contact</h3>
-
-<p>
-Email:
-<a href="mailto:adelmjkj@gmail.com">
-adelmjkj@gmail.com
-</a>
-</p>
-
-<p>
-Phone: 01274781564
-</p>
-
-
-<p>
-GitHub:
-<a href="https://github.com/cybe55">
-github.com/cybe55
-</a>
-</p>
-
-
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Adel Mahmoud Haridy. Hosted on GitHub Pages & Custom Domain.</p>
+    </footer>
 
 </div>
 
