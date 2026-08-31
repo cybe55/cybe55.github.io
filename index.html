@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adel Haridy | Infrastructure & Red Teaming Portfolio</title>
+    <title>Adel Haridy | Enterprise Infrastructure & Red Teaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -37,7 +37,6 @@
             margin: 0 auto;
         }
 
-        /* Header Section */
         header {
             text-align: center;
             padding-bottom: 40px;
@@ -76,7 +75,6 @@
             color: var(--accent-color);
         }
 
-        /* Section Titles */
         .section-title {
             color: var(--text-heading);
             font-size: 1.8rem;
@@ -92,7 +90,6 @@
             color: var(--accent-color);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -128,11 +125,10 @@
             border-radius: 15px;
         }
 
-        /* Projects Section */
         .projects-container {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 30px;
             margin-bottom: 50px;
         }
 
@@ -149,9 +145,34 @@
             border-left-color: var(--red-team);
         }
 
-        .project-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-color);
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            background: #000000;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-img-link {
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .project-img:hover {
+            transform: scale(1.05);
         }
 
         .project-title {
@@ -185,7 +206,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        /* Certifications Grid */
         .certs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,7 +242,6 @@
             color: #8b949e;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             color: #8b949e;
@@ -236,7 +255,6 @@
 
 <div class="container">
 
-    <!-- Header / Intro -->
     <header>
         <h1>Adel Mahmoud Haridy</h1>
         <div class="subtitle"><i class="fas fa-user-ninja"></i> Enterprise Networking & Red Teaming Specialist</div>
@@ -250,7 +268,6 @@
         </div>
     </header>
 
-    <!-- Technical Arsenal / Skills -->
     <h2 class="section-title"><i class="fas fa-tools"></i> Technical Arsenal</h2>
     <div class="skills-grid">
         <div class="skill-category">
@@ -283,13 +300,24 @@
         </div>
     </div>
 
-    <!-- Projects Section -->
     <h2 class="section-title"><i class="fas fa-project-diagram"></i> Hands-on Network & Infrastructure Projects</h2>
     
     <div class="projects-container">
 
         <!-- Project 1 -->
         <div class="project-card">
+            <div class="project-gallery">
+                <a href="./images/projects/project-1.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-1.png" alt="Multi-Site Network Topology" class="project-img">
+                </a>
+                <a href="./images/projects/project-10.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-10.png" alt="OSPF Routing Setup" class="project-img">
+                </a>
+                <a href="./images/projects/project-11.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-11.png" alt="Switching & VLANs Config" class="project-img">
+                </a>
+            </div>
+
             <h3 class="project-title">1. Enterprise Multi-Site Routing & Switching Infrastructure Design</h3>
             <p class="project-description">
                 Designed and implemented a full-scale corporate network topology simulating multi-branch interconnections, redundancy, and traffic control based on CCNA/CCNP standards.
@@ -312,6 +340,18 @@
 
         <!-- Project 2 -->
         <div class="project-card">
+            <div class="project-gallery">
+                <a href="./images/projects/project-12.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-12.png" alt="Network ACL Implementation" class="project-img">
+                </a>
+                <a href="./images/projects/project-13.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-13.png" alt="Port Security Configuration" class="project-img">
+                </a>
+                <a href="./images/projects/project-14.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-14.png" alt="DHCP Snooping Mitigation" class="project-img">
+                </a>
+            </div>
+
             <h3 class="project-title">2. Network Security, Access Control & Traffic Mitigation Lab</h3>
             <p class="project-description">
                 Engineered perimeter security and internal isolation mechanisms across enterprise routers and switches to protect against unauthorized lateral movement.
@@ -333,6 +373,18 @@
 
         <!-- Project 3 -->
         <div class="project-card red-team">
+            <div class="project-gallery">
+                <a href="./images/projects/project-15.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-15.png" alt="Active Directory Threat Emulation" class="project-img">
+                </a>
+                <a href="./images/projects/project-16.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-16.png" alt="Linux Privilege Escalation Lab" class="project-img">
+                </a>
+                <a href="./images/projects/project-17.png" target="_blank" class="project-img-link">
+                    <img src="./images/projects/project-17.png" alt="BloodHound Path Discovery" class="project-img">
+                </a>
+            </div>
+
             <h3 class="project-title">3. Active Directory & Linux Infrastructure Threat Emulation</h3>
             <p class="project-description">
                 Building a hybrid lab environment integrating Windows Server AD (MCSA) and Red Hat Enterprise Linux (RHEL) to test adversary tactics and security controls.
@@ -353,7 +405,6 @@
 
     </div>
 
-    <!-- Verified Certifications Section -->
     <h2 class="section-title"><i class="fas fa-certificate"></i> Verified Certifications</h2>
     
     <div class="certs-grid">
@@ -426,7 +477,6 @@
 
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Adel Mahmoud Haridy | Portfolio Hosted on adelharidy.tech</p>
     </footer>
