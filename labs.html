@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical Labs & Projects | Adel Haridy</title>
+    <title>Practical Labs & Configs | Adel Haridy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -29,7 +29,7 @@
             <a href="index.html" class="text-xl font-bold text-accentBlue font-mono">&lt;AdelHaridy /&gt;</a>
             <div class="space-x-6 text-sm font-medium flex items-center">
                 <a href="index.html" class="hover:text-accentBlue transition">Home & About</a>
-                <a href="labs.html" class="text-accentBlue font-semibold">Practical Labs</a>
+                <a href="labs.html" class="text-accentBlue font-semibold">Practical Labs & Configs</a>
             </div>
         </div>
     </nav>
@@ -37,10 +37,10 @@
     <!-- Header -->
     <section class="pt-32 pb-8 px-6 max-w-6xl mx-auto">
         <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-3">
-            Hands-on Labs & Projects
+            Practical Labs & Device Configurations
         </h1>
-        <p class="text-gray-400 text-base">
-            Detailed technical documentation of infrastructure labs, SIEM security deployments, and topologies.
+        <p class="text-gray-400 text-base max-w-2xl">
+            Hands-on Network Security & Systems Architectures with verified screenshots, topology diagrams, and raw device configuration files (CLI/Scripts).
         </p>
     </section>
 
@@ -48,37 +48,107 @@
     <section class="pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Lab 1 -->
+            <!-- Lab 1: SOC & Monitoring -->
             <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
-                <img src="lab-proof-1.png" alt="SOC Lab Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
-                <div class="p-6">
-                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">SOC & Monitoring</span>
-                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Enterprise SOC & Brute-Force Detection Lab</h3>
-                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-                        Simulated a SOC environment using Wazuh SIEM deployed on Ubuntu Server monitoring Windows Server endpoints. Generated SSH/RDP brute-force attacks via Kali Linux and configured custom alert rules.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Wazuh SIEM</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Kali Linux</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Active Directory</span>
+                <div>
+                    <img src="lab-proof-1.png" alt="SOC Lab Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
+                    <div class="p-6">
+                        <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">SOC & Threat Monitoring</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">Enterprise SOC & Brute-Force Detection Lab</h3>
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                            Deployed Wazuh SIEM on Ubuntu Server to monitor Windows/Linux endpoints. Configured custom rules to detect RDP/SSH brute-force attempts and executed active response scripts for dynamic IP blocking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Wazuh SIEM</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Linux Log Analysis</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Active Response Script</span>
+                        </div>
                     </div>
+                </div>
+                <!-- Links & Configs -->
+                <div class="px-6 py-4 bg-slate-900/50 border-t border-slate-800/80 flex flex-wrap justify-between items-center text-xs">
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentBlue font-medium hover:underline flex items-center mb-1">
+                        <i class="fa-brands fa-github mr-1"></i> View Repository
+                    </a>
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentGreen font-mono font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-code mr-1"></i> View Wazuh Rules & Config (.xml)
+                    </a>
                 </div>
             </div>
 
-            <!-- Lab 2 -->
+            <!-- Lab 2: Enterprise Routing & Switching (CCNA/CCNP Configs) -->
             <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
-                <img src="lab-proof-2.png" alt="Network Topology Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
-                <div class="p-6">
-                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">Network & Firewall</span>
-                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Multi-Site Enterprise Topology with FortiGate</h3>
-                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-                        Designed a dual-site corporate network topology in EVE-NG. Configured Cisco OSPF routing, VLAN segmentation, Fortinet FortiGate UTM security policies, and Site-to-Site IPsec tunnels.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">CCNP Routing</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">FortiGate UTM</span>
-                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">IPsec VPN</span>
+                <div>
+                    <img src="lab-proof-2.png" alt="Network Topology Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
+                    <div class="p-6">
+                        <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">Enterprise Routing & Switching</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">Multi-Site Infrastructure & FortiGate Topology</h3>
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                            Simulated an enterprise multi-branch topology in EVE-NG. Implemented OSPF multi-area routing, LACP EtherChannel, VLAN Trunking, Rapid STP, and FortiGate Firewall NAT/IPsec VPN policies.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">OSPF / EIGRP</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">FortiGate UTM</span>
+                            <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">L2/L3 Switching</span>
+                        </div>
                     </div>
+                </div>
+                <!-- Links & Configs -->
+                <div class="px-6 py-4 bg-slate-900/50 border-t border-slate-800/80 flex flex-wrap justify-between items-center text-xs">
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentBlue font-medium hover:underline flex items-center mb-1">
+                        <i class="fa-brands fa-github mr-1"></i> View Topology
+                    </a>
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentGreen font-mono font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-file-code mr-1"></i> Download Cisco CLI Configs (.txt)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lab 3: System Hardening & RedHat -->
+            <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
+                <div class="p-6">
+                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">SysAdmin & Hardening</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Red Hat Enterprise Linux (RHEL) Hardening Lab</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Configured system-wide hardening policies including SELinux targeted enforcement, Firewalld zone isolation, LVM partition management, and SSH hardening configurations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">RHEL 8/9</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">SELinux</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Firewalld</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-900/50 border-t border-slate-800/80 flex flex-wrap justify-between items-center text-xs">
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentBlue font-medium hover:underline flex items-center mb-1">
+                        <i class="fa-brands fa-github mr-1"></i> View Guide
+                    </a>
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentGreen font-mono font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-terminal mr-1"></i> View Bash Hardening Script
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lab 4: Active Directory Pentesting Walkthrough -->
+            <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
+                <div class="p-6">
+                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">Offensive Security</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Active Directory Domain Compromise & Write-up</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Emulated adversary tactics inside a Windows Server AD environment. Used BloodHound to map privilege escalation paths, executed Kerberoasting, and harvested credentials to gain Domain Admin.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Kerberoasting</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">BloodHound</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Metasploit</span>
+                    </div>
+                </div>
+                <div class="px-6 py-4 bg-slate-900/50 border-t border-slate-800/80 flex flex-wrap justify-between items-center text-xs">
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentBlue font-medium hover:underline flex items-center mb-1">
+                        <i class="fa-brands fa-github mr-1"></i> View Write-up PDF
+                    </a>
+                    <a href="https://github.com/cybe55" target="_blank" class="text-accentGreen font-mono font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-bug mr-1"></i> Attack Walkthrough Notes
+                    </a>
                 </div>
             </div>
 
@@ -87,7 +157,7 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-slate-800 text-center text-sm text-gray-500">
-        <p>&copy; 2026 Adel Haridy. Practical Labs Portfolio.</p>
+        <p>&copy; 2026 Adel Haridy. All lab configurations available on GitHub.</p>
     </footer>
 
 </body>
