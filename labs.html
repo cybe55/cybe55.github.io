@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Labs & Projects | Adel Haridy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b',
+                        accentBlue: '#38bdf8',
+                        accentGreen: '#4ade80'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased min-h-screen">
 
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-slate-900/90 backdrop-blur border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-accentBlue font-mono">&lt;AdelHaridy /&gt;</a>
+            <div class="space-x-6 text-sm font-medium flex items-center">
+                <a href="index.html" class="hover:text-accentBlue transition">Home & About</a>
+                <a href="labs.html" class="text-accentBlue font-semibold">Practical Labs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-8 px-6 max-w-6xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-3">
+            Hands-on Labs & Projects
+        </h1>
+        <p class="text-gray-400 text-base">
+            Detailed technical documentation of infrastructure labs, SIEM security deployments, and topologies.
+        </p>
+    </section>
+
+    <!-- Labs Grid -->
+    <section class="pb-20 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Lab 1 -->
+            <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
+                <img src="lab-proof-1.png" alt="SOC Lab Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
+                <div class="p-6">
+                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">SOC & Monitoring</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Enterprise SOC & Brute-Force Detection Lab</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Simulated a SOC environment using Wazuh SIEM deployed on Ubuntu Server monitoring Windows Server endpoints. Generated SSH/RDP brute-force attacks via Kali Linux and configured custom alert rules.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Wazuh SIEM</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Kali Linux</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">Active Directory</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lab 2 -->
+            <div class="bg-cardBg rounded-xl overflow-hidden border border-slate-700/60 flex flex-col justify-between">
+                <img src="lab-proof-2.png" alt="Network Topology Proof" class="w-full h-52 object-cover border-b border-slate-700/60">
+                <div class="p-6">
+                    <span class="text-xs font-mono text-accentBlue uppercase tracking-wider">Network & Firewall</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Multi-Site Enterprise Topology with FortiGate</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Designed a dual-site corporate network topology in EVE-NG. Configured Cisco OSPF routing, VLAN segmentation, Fortinet FortiGate UTM security policies, and Site-to-Site IPsec tunnels.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">CCNP Routing</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">FortiGate UTM</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">IPsec VPN</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Adel Haridy. Practical Labs Portfolio.</p>
+    </footer>
+
+</body>
+</html>
